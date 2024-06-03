@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:Teatre"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Главное окно" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button Content="Зритель" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="ViewerClickButton"/>
+        <Button Content="Директор" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="DirectorClickButton"/>
+        <Button Content="Режисёр" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="RegiserClickButton"/>
+    </StackPanel>
 </Window>

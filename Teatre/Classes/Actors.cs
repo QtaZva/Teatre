@@ -8,7 +8,7 @@ namespace Teatre.Classes
 {
     internal class Actors
     {
-        int id;
+        int id { get; set; }
         string full_name, gender, rank;
 
         public string Full_name

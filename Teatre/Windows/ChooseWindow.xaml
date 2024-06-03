@@ -1,0 +1,14 @@
+﻿<Window x:Class="Teatre.Windows.ChooseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Teatre.Windows"
+        mc:Ignorable="d"
+        Title="Окно выбора" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button Content="Актёры" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Click="ActorButtonClick"/>
+        <Button Content="Роли" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Click="RoleButtonClick"/>
+        <Button Content="Постановки" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Click="ProductionButtonClick"/>
+    </StackPanel>
+</Window>

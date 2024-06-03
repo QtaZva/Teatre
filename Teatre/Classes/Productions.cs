@@ -8,7 +8,7 @@ namespace Teatre.Classes
 {
     internal class Productions
     {
-        int id;
+        int id { get; set; }
         int role_id, actor_id;
         string appointment_date, withdrawal_date;
         public int Role_id
