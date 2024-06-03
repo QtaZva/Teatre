@@ -13,12 +13,12 @@ namespace Teatre.Classes
         string appointment_date, withdrawal_date;
         public int Role_id
         {
-            get { return id; }
-            set { id = value; }
+            get { return role_id; }
+            set { role_id = value; }
         }
         public int Actor_id
         {
-            set { id = value; }
+            set { actor_id = value; }
             get { return actor_id; }
         }
         public string Appointment_date

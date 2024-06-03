@@ -91,6 +91,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Actors.cs" />
+    <Compile Include="Classes\ApplicationContext.cs" />
+    <Compile Include="Classes\Productions.cs" />
+    <Compile Include="Classes\Roles.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
