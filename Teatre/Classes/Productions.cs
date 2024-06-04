@@ -8,36 +8,36 @@ namespace Teatre.Classes
 {
     internal class Productions
     {
-        int id { get; set; }
-        int role_id, actor_id;
-        string appointment_date, withdrawal_date;
-        public int Role_id
+        public int id { get; set; }
+        public int roleId, actorId;
+        public string appointmentDate, withdrawalDate;
+        public int RoleId
         {
-            get { return role_id; }
-            set { role_id = value; }
+            get { return roleId; }
+            set { roleId = value; }
         }
-        public int Actor_id
+        public int ActorId
         {
-            set { actor_id = value; }
-            get { return actor_id; }
+            set { actorId = value; }
+            get { return actorId; }
         }
-        public string Appointment_date
+        public string AppointmentDate
         {
-            set {  appointment_date = value; }
-            get { return appointment_date; }
+            set {  appointmentDate = value; }
+            get { return appointmentDate; }
         }
-        public string Withdrawal_date
+        public string WithdrawalDate
         {
-            set { withdrawal_date = value; }
-            get { return withdrawal_date; }
+            set { withdrawalDate = value; }
+            get { return withdrawalDate; }
         }
         public Productions() { }
-        public Productions(int role_id, int actor_id, string appointment_date, string withdrawal_date)
+        public Productions(int roleId, int actorId, string appointmentDate, string withdrawalDate)
         {
-            this.role_id = role_id;
-            this.actor_id = actor_id;
-            this.appointment_date = appointment_date;
-            this.withdrawal_date = withdrawal_date;
+            this.roleId = roleId;
+            this.actorId = actorId;
+            this.appointmentDate = appointmentDate;
+            this.withdrawalDate = withdrawalDate;
         }
     }
 }

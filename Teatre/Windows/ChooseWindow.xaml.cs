@@ -33,12 +33,16 @@ namespace Teatre.Windows
 
         private void RoleButtonClick(object sender, RoutedEventArgs e)
         {
-
+            RolesViewWindow rolesViewWindow = new RolesViewWindow();
+            rolesViewWindow.Show();
+            this.Close();
         }
 
         private void ProductionButtonClick(object sender, RoutedEventArgs e)
         {
-
+            ProductionsViewWindow productionsViewWindow = new ProductionsViewWindow();
+            productionsViewWindow.Show();
+            this.Close();
         }
     }
 }

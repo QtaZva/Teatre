@@ -1,11 +1,11 @@
-﻿<Window x:Class="Teatre.Windows.ActorsViewWindow"
+﻿<Window x:Class="Teatre.Windows.RolesViewWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Teatre.Windows"
         mc:Ignorable="d"
-        Title="ActorsViewWindow" Height="450" Width="800">
+        Title="Роли" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -13,8 +13,8 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
             <Button Content="Назад" Click="BackButtonClick"/>
-            <Button x:Name="addbtn" Content="Добавить актёра" Click="AddButtonClick"/>
+            <Button x:Name="addbtn" Content="Добавить роль" Click="AddButtonClick"/>
         </StackPanel>
-        <DataGrid x:Name="Actors" Grid.Row="1"/>
+        <DataGrid x:Name="Roles" Grid.Row="1"/>
     </Grid>
 </Window>

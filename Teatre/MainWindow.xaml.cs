@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Teatre.Classes;
 using Teatre.Windows;
 
 namespace Teatre
@@ -28,6 +29,7 @@ namespace Teatre
 
         private void ViewerClickButton(object sender, RoutedEventArgs e)
         {
+            User.user = 0;
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
@@ -35,6 +37,7 @@ namespace Teatre
 
         private void DirectorClickButton(object sender, RoutedEventArgs e)
         {
+            User.user = 1;
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
@@ -42,6 +45,7 @@ namespace Teatre
 
         private void RegiserClickButton(object sender, RoutedEventArgs e)
         {
+            User.user = 2;
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();

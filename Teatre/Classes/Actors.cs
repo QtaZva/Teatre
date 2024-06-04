@@ -8,13 +8,13 @@ namespace Teatre.Classes
 {
     internal class Actors
     {
-        int id { get; set; }
-        string full_name, gender, rank;
+        public int id { get; set; }
+        public string fullName, gender, rank;
 
-        public string Full_name
+        public string FullName
         {
-            get { return full_name; }
-            set { full_name = value; }
+            get { return fullName; }
+            set { fullName = value; }
         }
         public string Gender
         {
@@ -28,9 +28,9 @@ namespace Teatre.Classes
         }
         public Actors() { }
 
-        public Actors(string full_name, string gender, string rank) 
+        public Actors(string fullName, string gender, string rank) 
         { 
-            this.full_name = full_name;
+            this.fullName = fullName;
             this.gender = gender;
             this.rank = rank;
         }

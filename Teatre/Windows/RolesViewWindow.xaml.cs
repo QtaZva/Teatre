@@ -16,17 +16,17 @@ using Teatre.Classes;
 namespace Teatre.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ActorsViewWindow.xaml
+    /// Логика взаимодействия для RolesViewWindow.xaml
     /// </summary>
-    public partial class ActorsViewWindow : Window
+    public partial class RolesViewWindow : Window
     {
         ApplicationContext db;
-        public ActorsViewWindow()
+        public RolesViewWindow()
         {
             InitializeComponent();
             db = new ApplicationContext();
-            Actors.ItemsSource = db.Actors.ToList();
-            if (User.user == 0)
+            Roles.ItemsSource = db.Roles.ToList();
+            if (User.user == 0 || User.user == 1)
             {
                 addbtn.Visibility = Visibility.Hidden;
             }
@@ -34,9 +34,7 @@ namespace Teatre.Windows
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-            AddActorWindow addActorWindow = new AddActorWindow();
-            addActorWindow.ShowDialog();
-            Actors.ItemsSource = db.Actors.ToList();
+
         }
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {

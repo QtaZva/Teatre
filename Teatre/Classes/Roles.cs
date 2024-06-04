@@ -8,8 +8,8 @@ namespace Teatre.Classes
 {
     internal class Roles
     {
-        int id { get; set; }
-        string name, piece;
+        public int id { get; set; }
+        public string name, piece;
         public string Name
         {
             get { return name; }
