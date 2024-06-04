@@ -1,0 +1,15 @@
+﻿<Window x:Class="Teatre.Windows.AddRoleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Teatre.Windows"
+        mc:Ignorable="d"
+        Title="AddRoleWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Width="150" Margin="10" x:Name="name" materialDesign:HintAssist.Hint="Название"/>
+        <TextBox Margin="10" x:Name="Piece" materialDesign:HintAssist.Hint="Пьеса"/>
+        <Button Content="Добавить роль" Click="AddRole"/>
+    </StackPanel>
+</Window>

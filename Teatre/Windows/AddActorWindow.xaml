@@ -4,12 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Teatre.Windows"
+        xmlns:materialDesign ="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Добавить актёра" Height="450" Width="800">
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <TextBox Width="150" Margin="10" x:Name="fullName"/>
-        <TextBox Margin="10" x:Name="Gender"/>
-        <TextBox Margin="10" x:Name="Rank"/>
+        <TextBox Width="150" Margin="10" x:Name="fullName" materialDesign:HintAssist.Hint="ФИО"/>
+        <TextBox Margin="10" x:Name="Gender" materialDesign:HintAssist.Hint="Пол"/>
+        <TextBox Margin="10" x:Name="Rank" materialDesign:HintAssist.Hint="Звание"/>
         <Button Content="Добавить актёра" Click="AddActor"/>
     </StackPanel>
 </Window>

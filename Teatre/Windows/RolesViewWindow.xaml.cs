@@ -34,7 +34,9 @@ namespace Teatre.Windows
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-
+            AddRoleWindow addRoleWindow = new AddRoleWindow();
+            addRoleWindow.ShowDialog();
+            Roles.ItemsSource = db.Roles.ToList();
         }
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {

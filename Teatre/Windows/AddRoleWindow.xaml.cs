@@ -16,23 +16,23 @@ using Teatre.Classes;
 namespace Teatre.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для AddActorWindow.xaml
+    /// Логика взаимодействия для AddRoleWindow.xaml
     /// </summary>
-    public partial class AddActorWindow : Window
+    public partial class AddRoleWindow : Window
     {
         ApplicationContext db;
-        public AddActorWindow()
+        public AddRoleWindow()
         {
             InitializeComponent();
         }
 
-        private void AddActor(object sender, RoutedEventArgs e)
+        private void AddRole(object sender, RoutedEventArgs e)
         {
             db = new ApplicationContext();
-            Actors newactor = new Actors(fullName.Text, Gender.Text, Rank.Text);
-            db.Actors.Add(newactor);
+            Roles newRole = new Roles(name.Text, Piece.Text);
+            db.Roles.Add(newRole);
             db.SaveChanges();
-            MessageBox.Show("Актёр успешно добавлен!");
+            MessageBox.Show("Роль успешно добавлена!");
         }
     }
 }
