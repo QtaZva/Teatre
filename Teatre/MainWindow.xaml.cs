@@ -17,9 +17,6 @@ using Teatre.Windows;
 
 namespace Teatre
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         ApplicationContext db;
@@ -54,7 +51,9 @@ namespace Teatre
 
         private void RegisterClickButton(object sender, RoutedEventArgs e)
         {
-
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.Show();
+            this.Close();
         }
     }
 }

@@ -4,14 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Teatre"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Главное окно" Height="450" Width="800">
-    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Width="240">
-        <Label Content="Вход" Style="{StaticResource MaterialDesignLabel}" HorizontalAlignment="Center" FontSize="30"/>
-        <TextBox x:Name="LoginTextBox" materialDesign:HintAssist.Hint="Логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10"/>
-        <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="10"/>
-        <Button Content="Войти" Click="LoginClickButton" Margin="10"/>
-        <Button Content="Зарегестрироваться" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="10"/>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="Вход" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <materialDesign:Card Width="260" Height="300">
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Width="240">
+                <Label Content="Вход" Style="{StaticResource MaterialDesignLabel}" HorizontalAlignment="Center" FontSize="30"/>
+                <TextBox x:Name="LoginTextBox" materialDesign:HintAssist.Hint="Логин" Margin="10" materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="Password" materialDesign:TextFieldAssist.HasClearButton="True"
+             Style="{StaticResource MaterialDesignRevealPasswordBox}" Margin="10"/>
+                <Button Content="Войти" Click="LoginClickButton" Margin="10"/>
+                <Button Content="Зарегестрироваться" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="10" Click="RegisterClickButton"/>
+            </StackPanel>
+        </materialDesign:Card>
     </StackPanel>
+    
 </Window>

@@ -27,7 +27,7 @@ namespace Teatre.Classes
             set { accessLevel = value; }
         }
         Users() { }
-        Users (string  login, string password, int accessLevel)
+        public Users (string  login, string password, int accessLevel)
         {
             this.login = login;
             this.password = password;

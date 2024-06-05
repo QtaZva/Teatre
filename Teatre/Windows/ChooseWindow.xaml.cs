@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Teatre.Classes;
 
 namespace Teatre.Windows
 {
@@ -22,6 +23,10 @@ namespace Teatre.Windows
         public ChooseWindow()
         {
             InitializeComponent();
+            if (User.UserAccessLevel > 0)
+            {
+                RootButton.IsEnabled = true;
+            }
         }
 
         private void ActorButtonClick(object sender, RoutedEventArgs e)
