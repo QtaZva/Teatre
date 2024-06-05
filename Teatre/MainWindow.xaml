@@ -7,9 +7,11 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Главное окно" Height="450" Width="800">
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Зритель" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="ViewerClickButton"/>
-        <Button Content="Директор" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="DirectorClickButton"/>
-        <Button Content="Режисёр" Margin="10" Style="{StaticResource MaterialDesignOutlinedButton}" Click="RegiserClickButton"/>
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Width="240">
+        <Label Content="Вход" Style="{StaticResource MaterialDesignLabel}" HorizontalAlignment="Center" FontSize="30"/>
+        <TextBox x:Name="LoginTextBox" materialDesign:HintAssist.Hint="Логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="10"/>
+        <PasswordBox x:Name="PasswordTextBox" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="10"/>
+        <Button Content="Войти" Click="LoginClickButton" Margin="10"/>
+        <Button Content="Зарегестрироваться" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="10"/>
     </StackPanel>
 </Window>

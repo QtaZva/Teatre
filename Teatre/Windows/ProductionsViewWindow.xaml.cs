@@ -26,7 +26,7 @@ namespace Teatre.Windows
             InitializeComponent();
             db = new ApplicationContext();
             Productions.ItemsSource = db.Productions.ToList();
-            if (User.user == 0 || User.user == 1)
+            if (User.UserAccessLevel == 0 || User.UserAccessLevel == 1)
             {
                 addbtn.Visibility = Visibility.Hidden;
                 Productions.IsReadOnly = true;

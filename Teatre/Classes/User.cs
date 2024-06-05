@@ -8,6 +8,6 @@ namespace Teatre.Classes
 {
     internal class User
     {
-        public static int user;
+        public static int UserAccessLevel;
     }
 }

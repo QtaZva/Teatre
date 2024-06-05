@@ -26,7 +26,7 @@ namespace Teatre.Windows
             InitializeComponent();
             db = new ApplicationContext();
             Actors.ItemsSource = db.Actors.ToList();
-            if (User.user == 0)
+            if (User.UserAccessLevel == 0)
             {
                 addbtn.Visibility = Visibility.Hidden;
                 //editbtn.Visibility = Visibility.Hidden;

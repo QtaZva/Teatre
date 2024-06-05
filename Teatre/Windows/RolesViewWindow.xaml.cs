@@ -15,9 +15,6 @@ using Teatre.Classes;
 
 namespace Teatre.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для RolesViewWindow.xaml
-    /// </summary>
     public partial class RolesViewWindow : Window
     {
         ApplicationContext db;
@@ -26,7 +23,7 @@ namespace Teatre.Windows
             InitializeComponent();
             db = new ApplicationContext();
             Roles.ItemsSource = db.Roles.ToList();
-            if (User.user == 0 || User.user == 1)
+            if (User.UserAccessLevel == 0 || User.UserAccessLevel == 1)
             {
                 addbtn.Visibility = Visibility.Hidden;
                 Roles.IsReadOnly = true;

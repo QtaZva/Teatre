@@ -22,33 +22,39 @@ namespace Teatre
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplicationContext db;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ViewerClickButton(object sender, RoutedEventArgs e)
+        private void LoginClickButton(object sender, RoutedEventArgs e)
         {
-            User.user = 0;
+            db = new ApplicationContext();
+            var UserLog = db.Users.Where(u => u.Login == LoginTextBox.Text && u.Password == PasswordTextBox.Password).FirstOrDefault();
+            if(UserLog != null)
+            {
+                MessageBox.Show("Вы успешно вошли!");
+                User.UserAccessLevel = UserLog.AccessLevel;
+                CreateChooseWindow();
+            }
+            else
+            {
+                MessageBox.Show("Логин или пароль были введены неправильно!");
+                LoginTextBox.Clear();
+                PasswordTextBox.Clear();
+            }
+        }
+        private void CreateChooseWindow()
+        {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
         }
 
-        private void DirectorClickButton(object sender, RoutedEventArgs e)
+        private void RegisterClickButton(object sender, RoutedEventArgs e)
         {
-            User.user = 1;
-            ChooseWindow chooseWindow = new ChooseWindow();
-            chooseWindow.Show();
-            this.Close();
-        }
 
-        private void RegiserClickButton(object sender, RoutedEventArgs e)
-        {
-            User.user = 2;
-            ChooseWindow chooseWindow = new ChooseWindow();
-            chooseWindow.Show();
-            this.Close();
         }
     }
 }
