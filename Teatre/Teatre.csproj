@@ -101,6 +101,9 @@
     <Compile Include="Windows\ChooseWindow.xaml.cs">
       <DependentUpon>ChooseWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\GiveRootWindow.xaml.cs">
+      <DependentUpon>GiveRootWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ProductionsViewWindow.xaml.cs">
       <DependentUpon>ProductionsViewWindow.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ChooseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GiveRootWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

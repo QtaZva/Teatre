@@ -49,5 +49,11 @@ namespace Teatre.Windows
             productionsViewWindow.Show();
             this.Close();
         }
+
+        private void GiveRootButtonClick(object sender, RoutedEventArgs e)
+        {
+            GiveRootWindow giveRootWindow = new GiveRootWindow();
+            giveRootWindow.ShowDialog();
+        }
     }
 }

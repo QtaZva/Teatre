@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Teatre.Classes;
 
 namespace Teatre.Windows
 {
@@ -19,9 +20,12 @@ namespace Teatre.Windows
     /// </summary>
     public partial class GiveRootWindow : Window
     {
+        ApplicationContext db;
         public GiveRootWindow()
         {
             InitializeComponent();
+            db = new ApplicationContext();
+            UsersListBox.ItemsSource = db.Users.ToList();
         }
     }
 }
