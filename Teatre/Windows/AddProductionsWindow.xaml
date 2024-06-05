@@ -10,8 +10,8 @@
     <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
         <TextBox Width="150" Margin="10" x:Name="actorId" materialDesign:HintAssist.Hint="id актёра"/>
         <TextBox Margin="10" x:Name="roleId" materialDesign:HintAssist.Hint="id роли"/>
-        <TextBox Margin="10" x:Name="appointmentDate" materialDesign:HintAssist.Hint="Дата назвачения"/>
-        <TextBox Margin="10" x:Name="withdrawalDate" materialDesign:HintAssist.Hint="Дата снятия"/>
+        <DatePicker Margin="10" x:Name="appointmentDate" materialDesign:HintAssist.Hint="Дата назвачения"/>
+        <DatePicker Margin="10" x:Name="withdrawalDate" materialDesign:HintAssist.Hint="Дата снятия"/>
         <Button Content="Добавить постановку" Click="AddProductions"/>
     </StackPanel>
 </Window>

@@ -29,12 +29,14 @@ namespace Teatre.Windows
             if (User.user == 0 || User.user == 1)
             {
                 addbtn.Visibility = Visibility.Hidden;
+                Productions.IsReadOnly = true;
             }
         }
 
         private void AddButtonClick(object sender, RoutedEventArgs e)
         {
-
+            AddProductionsWindow addProductionsWindow = new AddProductionsWindow();
+            addProductionsWindow.ShowDialog();
         }
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
@@ -42,6 +44,11 @@ namespace Teatre.Windows
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
+        }
+
+        private void SaveChanges(object sender, SelectionChangedEventArgs e)
+        {
+            db.SaveChanges();
         }
     }
 }

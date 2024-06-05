@@ -15,6 +15,6 @@
             <Button Content="Назад" Click="BackButtonClick"/>
             <Button x:Name="addbtn" Content="Добавить постановку" Click="AddButtonClick"/>
         </StackPanel>
-        <DataGrid x:Name="Productions" Grid.Row="1"/>
+        <DataGrid x:Name="Productions" Grid.Row="1" SelectionChanged="SaveChanges"/>
     </Grid>
 </Window>

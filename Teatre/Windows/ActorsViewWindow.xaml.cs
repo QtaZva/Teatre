@@ -29,6 +29,8 @@ namespace Teatre.Windows
             if (User.user == 0)
             {
                 addbtn.Visibility = Visibility.Hidden;
+                //editbtn.Visibility = Visibility.Hidden;
+                Actors.IsReadOnly = true;
             }
         }
 
@@ -43,6 +45,11 @@ namespace Teatre.Windows
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
+        }
+
+        private void SaveChanges(object sender, SelectionChangedEventArgs e)
+        {
+            db.SaveChanges();
         }
     }
 }
