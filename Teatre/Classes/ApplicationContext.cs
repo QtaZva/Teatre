@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Teatre.Classes
 {
-    internal class ApplicationContext: DbContext
+    internal class ApplicationContext: DbContext // Модель базы данных
     {
         public DbSet<Productions> Productions { get; set; }
         public DbSet<Users> Users { get; set; }

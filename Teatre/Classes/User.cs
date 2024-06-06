@@ -8,6 +8,6 @@ namespace Teatre.Classes
 {
     internal class User
     {
-        public static int UserAccessLevel;
+        public static int UserAccessLevel; // Сюда передаётся уровень доступа вошедшего в аккаунт пользователя
     }
 }

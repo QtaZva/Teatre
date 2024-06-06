@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Teatre.Classes
 {
-    internal class Roles
+    internal class Roles // Таблица ролей
     {
         public int id { get; set; }
         public string name, piece;

@@ -25,7 +25,7 @@ namespace Teatre.Windows
         {
             InitializeComponent();
             db = new ApplicationContext();
-            Actors.ItemsSource = db.Actors.ToList();
+            Actors.ItemsSource = db.Actors.ToList(); // Вывод актёров в datagrid
             
             if (User.UserAccessLevel == 0)
             {
@@ -35,20 +35,20 @@ namespace Teatre.Windows
             }
         }
 
-        private void AddButtonClick(object sender, RoutedEventArgs e)
+        private void AddButtonClick(object sender, RoutedEventArgs e) // Создание окна добавления актёра
         {
             AddActorWindow addActorWindow = new AddActorWindow();
             addActorWindow.ShowDialog();
             Actors.ItemsSource = db.Actors.ToList();
         }
-        private void BackButtonClick(object sender, RoutedEventArgs e)
+        private void BackButtonClick(object sender, RoutedEventArgs e) // Кнопка возврата к окну выбора 
         {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
         }
 
-        private void SaveChanges(object sender, SelectionChangedEventArgs e)
+        private void SaveChanges(object sender, SelectionChangedEventArgs e) // Сохранение изменений
         {
             db.SaveChanges();
         }

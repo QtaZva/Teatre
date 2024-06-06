@@ -25,7 +25,13 @@ namespace Teatre.Windows
         {
             InitializeComponent();
             db = new ApplicationContext();
-            UsersListBox.ItemsSource = db.Users.ToList();
+            UsersListBox.ItemsSource = db.Users.ToList(); // Вывод пользователей в ListBox
+        }
+
+        private void SaveChanges(object sender, RoutedEventArgs e) // Сохранение изменений
+        {
+            db.SaveChanges();
+            MessageBox.Show("Изменения сохранены!");
         }
     }
 }

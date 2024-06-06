@@ -9,17 +9,23 @@
         Background="{DynamicResource MaterialDesignPaper}"
         Title="Выдать права" Height="450" Width="800">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-        <materialDesign:Card>
-            <ListBox x:Name="UsersListBox" ScrollViewer.VerticalScrollBarVisibility="Visible">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <Label Content="{Binding Login}"/>
-                            <TextBox materialDesign:HintAssist.Hint="Уровень доступа" Text="{Binding AccessLevel}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+        <materialDesign:Card Width="300" Height="400">
+            <StackPanel Orientation="Vertical">
+                <Label Content="0 - зритель"/>
+                <Label Content="1 - директор"/>
+                <Label Content="2 - режисёр"/>
+                <Button Content="Сохранить" Click="SaveChanges"/>
+                <ListBox x:Name="UsersListBox" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding Login}"/>
+                                <TextBox materialDesign:HintAssist.Hint="Уровень доступа" Text="{Binding AccessLevel}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
         </materialDesign:Card>
     </StackPanel>
 </Window>

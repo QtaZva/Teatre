@@ -23,20 +23,20 @@ namespace Teatre.Windows
             InitializeComponent();
             db = new ApplicationContext();
             Roles.ItemsSource = db.Roles.ToList();
-            if (User.UserAccessLevel == 0 || User.UserAccessLevel == 1)
+            if (User.UserAccessLevel == 0 || User.UserAccessLevel == 1) // Скрытие кнопок для зрителей и директора
             {
                 addbtn.Visibility = Visibility.Hidden;
                 Roles.IsReadOnly = true;
             }
         }
 
-        private void AddButtonClick(object sender, RoutedEventArgs e)
+        private void AddButtonClick(object sender, RoutedEventArgs e) // Создание окна добавления роли
         {
             AddRoleWindow addRoleWindow = new AddRoleWindow();
             addRoleWindow.ShowDialog();
             Roles.ItemsSource = db.Roles.ToList();
         }
-        private void BackButtonClick(object sender, RoutedEventArgs e)
+        private void BackButtonClick(object sender, RoutedEventArgs e) // Кнопка возврата
         {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();

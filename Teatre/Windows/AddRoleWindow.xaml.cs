@@ -26,7 +26,7 @@ namespace Teatre.Windows
             InitializeComponent();
         }
 
-        private void AddRole(object sender, RoutedEventArgs e)
+        private void AddRole(object sender, RoutedEventArgs e) // Добавление новой роли
         {
             db = new ApplicationContext();
             Roles newRole = new Roles(name.Text, Piece.Text);

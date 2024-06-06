@@ -26,7 +26,7 @@ namespace Teatre.Windows
             InitializeComponent();
         }
 
-        private void AddActor(object sender, RoutedEventArgs e)
+        private void AddActor(object sender, RoutedEventArgs e) // Добавление актёра в БД 
         {
             db = new ApplicationContext();
             Actors newactor = new Actors(fullName.Text, Gender.Text, Rank.Text);

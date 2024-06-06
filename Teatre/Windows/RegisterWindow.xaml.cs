@@ -29,23 +29,29 @@ namespace Teatre.Windows
 
         private void RegistrationClickButton(object sender, RoutedEventArgs e)
         {
-            if(LoginTextBox.Text.Length < 5)
+            if(LoginTextBox.Text.Length < 5) // Проверка на длину логина
             {
                 MessageBox.Show("Данный логин слишком короткий!");
                 LoginTextBox.Clear();
                 PasswordTextBox.Clear();
                 return;
             }
-            if (ValidatePassword(PasswordTextBox.Password))
+            if (db.Users.Where(u => u.Login == LoginTextBox.Text) == null) // Проверка на наличии такого логина в БД и валидация пароля
             {
-                Users newUser = new Users(LoginTextBox.Text, PasswordTextBox.Password, 0);
-                db.Users.Add(newUser);
-                db.SaveChanges();
-                MessageBox.Show("Вы успешно зарегестрировались!");
+                if (ValidatePassword(PasswordTextBox.Password))
+                {
+                    Users newUser = new Users(LoginTextBox.Text, PasswordTextBox.Password, 0);
+                    db.Users.Add(newUser);
+                    db.SaveChanges();
+                    MessageBox.Show("Вы успешно зарегестрировались!");
+                }
             }
+            else
+                MessageBox.Show("Такой пользователь уже существует!");
+            
         }
 
-        private void LoginClickButton(object sender, RoutedEventArgs e)
+        private void LoginClickButton(object sender, RoutedEventArgs e) // Создание окна входа
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();

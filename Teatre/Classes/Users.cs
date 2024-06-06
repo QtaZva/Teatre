@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Teatre.Classes
 {
-    internal class Users
+    internal class Users // Таблица пользователей
     {
         public int id {  get; set; }
         public string login, password;

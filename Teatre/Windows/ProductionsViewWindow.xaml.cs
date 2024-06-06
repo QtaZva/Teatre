@@ -33,20 +33,20 @@ namespace Teatre.Windows
             }
         }
 
-        private void AddButtonClick(object sender, RoutedEventArgs e)
+        private void AddButtonClick(object sender, RoutedEventArgs e) // Кнопка создания окна добавления постановки
         {
             AddProductionsWindow addProductionsWindow = new AddProductionsWindow();
             addProductionsWindow.ShowDialog();
         }
 
-        private void BackButtonClick(object sender, RoutedEventArgs e)
+        private void BackButtonClick(object sender, RoutedEventArgs e) // Кнопка возврата
         {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
         }
 
-        private void SaveChanges(object sender, SelectionChangedEventArgs e)
+        private void SaveChanges(object sender, SelectionChangedEventArgs e) // Сохранение изменений
         {
             db.SaveChanges();
         }

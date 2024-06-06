@@ -29,7 +29,7 @@ namespace Teatre
         {
             db = new ApplicationContext();
             var UserLog = db.Users.Where(u => u.Login == LoginTextBox.Text && u.Password == PasswordTextBox.Password).FirstOrDefault();
-            if(UserLog != null)
+            if(UserLog != null) // Проверка на наличие пользователя в БД
             {
                 MessageBox.Show("Вы успешно вошли!");
                 User.UserAccessLevel = UserLog.AccessLevel;
@@ -42,14 +42,14 @@ namespace Teatre
                 PasswordTextBox.Clear();
             }
         }
-        private void CreateChooseWindow()
+        private void CreateChooseWindow() // Создание окна выбора
         {
             ChooseWindow chooseWindow = new ChooseWindow();
             chooseWindow.Show();
             this.Close();
         }
 
-        private void RegisterClickButton(object sender, RoutedEventArgs e)
+        private void RegisterClickButton(object sender, RoutedEventArgs e) // Создание окна регистрации
         {
             RegisterWindow registerWindow = new RegisterWindow();
             registerWindow.Show();
