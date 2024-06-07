@@ -32,6 +32,7 @@ namespace Teatre.Windows
             Productions newProduction = new Productions(Convert.ToInt32(roleId.Text), Convert.ToInt32(actorId.Text), appointmentDate.Text, withdrawalDate.Text);
             db.Productions.Add(newProduction);
             db.SaveChanges();
+            MessageBox.Show("Добавленно!");
         }
     }
 }

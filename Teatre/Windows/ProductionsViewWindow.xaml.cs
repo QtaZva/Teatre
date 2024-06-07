@@ -24,8 +24,7 @@ namespace Teatre.Windows
         public ProductionsViewWindow()
         {
             InitializeComponent();
-            db = new ApplicationContext();
-            Productions.ItemsSource = db.Productions.ToList();
+            UpdateList();
             if (User.UserAccessLevel == 0 || User.UserAccessLevel == 1)
             {
                 addbtn.Visibility = Visibility.Hidden;
@@ -37,6 +36,7 @@ namespace Teatre.Windows
         {
             AddProductionsWindow addProductionsWindow = new AddProductionsWindow();
             addProductionsWindow.ShowDialog();
+            UpdateList();
         }
 
         private void BackButtonClick(object sender, RoutedEventArgs e) // Кнопка возврата
@@ -49,6 +49,11 @@ namespace Teatre.Windows
         private void SaveChanges(object sender, SelectionChangedEventArgs e) // Сохранение изменений
         {
             db.SaveChanges();
+        }
+        private void UpdateList()
+        {
+            db = new ApplicationContext();
+            Productions.ItemsSource = db.Productions.ToList();
         }
     }
 }
